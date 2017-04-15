@@ -1,14 +1,12 @@
-#!/usr/bin/env bash
+!/usr/bin/env bash
 
 read N
 sum=0
-i=1
-while [ "$i" -le "$N" ]
+for i in $(seq 1 "$N")
 do
-	read J
-	((sum += J))
-	((i += 1))
+	read I
+	((sum += I))
 done
 echo "$sum"
-printf "%0.03f\n" $(bc -l <<< ""$sum"/"$N"")
+printf "%0.4f\n" $(bc -l <<< ""$sum"/"$N"")
 
