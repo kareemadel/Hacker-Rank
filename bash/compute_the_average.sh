@@ -2,11 +2,13 @@
 
 read N
 sum=0
-for i in $(seq 1 "$N")
+i=1
+while [ "$i" -le "$N" ]
 do
-	read I
-	((sum += I))
+	read J
+	((sum += J))
+	((i += 1))
 done
 echo "$sum"
-printf "%0.4f\n" $(bc -l <<< ""$sum"/"$N"")
+echo $(bc -l <<< "scale=3;"$sum"/"$N"")
 
