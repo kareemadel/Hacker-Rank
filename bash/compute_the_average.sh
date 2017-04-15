@@ -10,5 +10,5 @@ do
 	((i += 1))
 done
 echo "$sum"
-echo $(bc -l <<< "scale=3;"$sum"/"$N"")
+printf "%0.03f\n" $(bc -l <<< ""$sum"/"$N"")
 
