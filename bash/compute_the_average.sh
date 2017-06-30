@@ -14,7 +14,6 @@
 
 read n
 sum=0
-<<<<<<< HEAD
 for ((i=0; i < $n; i++))
 do
     read x
